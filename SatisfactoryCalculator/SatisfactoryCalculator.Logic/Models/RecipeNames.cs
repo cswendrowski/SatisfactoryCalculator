@@ -4,6 +4,12 @@
     {
         Unset,
 
+        CopperOre,
+        CopperIngot,
+        Wire,
+        Cable,
+        Limestone,
+        Concrete,
         IronOre,
         IronIngot,
         IronPlate,

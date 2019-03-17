@@ -91,12 +91,12 @@ namespace SatisfactoryCalculator.Logic.Tests
             needs.TotalResourceNeeds.ShouldNotBeEmpty();
             needs.TotalMachineNeeds.ShouldNotBeEmpty();
 
-            needs.TotalMachineNeeds[Machines.Miner].ShouldBe(.25);
-            needs.TotalMachineNeeds[Machines.Smelter].ShouldBe(.5);
-            needs.TotalMachineNeeds[Machines.Constructor].ShouldBe(1);
+            needs.TotalMachineNeeds[Machines.Miner].ShouldBe(1.2d);
+            needs.TotalMachineNeeds[Machines.Smelter].ShouldBe(2.4d);
+            needs.TotalMachineNeeds[Machines.Constructor].ShouldBe(4.8d);
 
-            needs.TotalResourceNeeds[RecipeNames.IronOre].ShouldBe(15);
-            needs.TotalResourceNeeds[RecipeNames.IronIngot].ShouldBe(15);
+            needs.TotalResourceNeeds[RecipeNames.IronOre].ShouldBe(72);
+            needs.TotalResourceNeeds[RecipeNames.IronIngot].ShouldBe(72d);
         }
 
         [Fact]
@@ -111,12 +111,51 @@ namespace SatisfactoryCalculator.Logic.Tests
             needs.TotalResourceNeeds.ShouldNotBeEmpty();
             needs.TotalMachineNeeds.ShouldNotBeEmpty();
 
-            needs.TotalMachineNeeds[Machines.Miner].ShouldBe(.25);
-            needs.TotalMachineNeeds[Machines.Smelter].ShouldBe(.5);
-            needs.TotalMachineNeeds[Machines.Constructor].ShouldBe(1);
+            needs.TotalMachineNeeds[Machines.Miner].ShouldBe(2.8d);
+            needs.TotalMachineNeeds[Machines.Smelter].ShouldBe(5.6d);
+            needs.TotalMachineNeeds[Machines.Constructor].ShouldBe(11.2d);
 
             needs.TotalResourceNeeds[RecipeNames.IronOre].ShouldBe(168);
             needs.TotalResourceNeeds[RecipeNames.IronIngot].ShouldBe(168);
         }
+
+        [Fact]
+        public void CanCalculateCable()
+        {
+            var recipe = RecipeBook.GetRecipe(RecipeNames.Cable);
+
+            var needs = RecipeCalculator.CalculateRecipeNeeds(recipe);
+
+            needs.ShouldNotBeNull();
+            needs.Inputs.ShouldNotBeEmpty();
+            needs.TotalResourceNeeds.ShouldNotBeEmpty();
+            needs.TotalMachineNeeds.ShouldNotBeEmpty();
+
+            needs.TotalMachineNeeds[Machines.Miner].ShouldBe(0.5d);
+            needs.TotalMachineNeeds[Machines.Smelter].ShouldBe(1d);
+            needs.TotalMachineNeeds[Machines.Constructor].ShouldBe(3d);
+
+            needs.TotalResourceNeeds[RecipeNames.CopperIngot].ShouldBe(30);
+            needs.TotalResourceNeeds[RecipeNames.CopperOre].ShouldBe(30);
+        }
+
+        [Fact]
+        public void CanCalculateConcrete()
+        {
+            var recipe = RecipeBook.GetRecipe(RecipeNames.Concrete);
+
+            var needs = RecipeCalculator.CalculateRecipeNeeds(recipe);
+
+            needs.ShouldNotBeNull();
+            needs.Inputs.ShouldNotBeEmpty();
+            needs.TotalResourceNeeds.ShouldNotBeEmpty();
+            needs.TotalMachineNeeds.ShouldNotBeEmpty();
+
+            needs.TotalMachineNeeds[Machines.Miner].ShouldBe(.75d);
+            needs.TotalMachineNeeds[Machines.Constructor].ShouldBe(1d);
+
+            needs.TotalResourceNeeds[RecipeNames.Limestone].ShouldBe(45);
+        }
+
     }
 }

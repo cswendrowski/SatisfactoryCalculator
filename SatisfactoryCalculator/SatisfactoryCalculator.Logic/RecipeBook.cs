@@ -111,6 +111,65 @@ namespace SatisfactoryCalculator.Logic
                 }
             });
 
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.CopperOre,
+                CraftingTimePerItem = 1,
+                Machine = Machines.Miner,
+            });
+
+
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.CopperIngot,
+                CraftingTimePerItem = 2,
+                Machine = Machines.Smelter,
+                Inputs = new List<Input>
+                {
+                    new Input { Name = RecipeNames.CopperOre, Amount = 1 }
+                }
+            });
+
+
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.Wire,
+                CraftingTimePerItem = 4,
+                Machine = Machines.Constructor,
+                Inputs = new List<Input>
+                {
+                    new Input { Name = RecipeNames.CopperIngot, Amount = 1 }
+                }
+            });
+            
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.Cable,
+                CraftingTimePerItem = 4,
+                Machine = Machines.Constructor,
+                Inputs = new List<Input>
+                {
+                    new Input { Name = RecipeNames.Wire, Amount = 2 }
+                }
+            });
+
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.Limestone,
+                CraftingTimePerItem = 1,
+                Machine = Machines.Miner,
+            });
+
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.Concrete,
+                CraftingTimePerItem = 4,
+                Machine = Machines.Constructor,
+                Inputs = new List<Input>
+                {
+                    new Input { Name = RecipeNames.Limestone, Amount = 3 }
+                }
+            });
         }
     }
 }
