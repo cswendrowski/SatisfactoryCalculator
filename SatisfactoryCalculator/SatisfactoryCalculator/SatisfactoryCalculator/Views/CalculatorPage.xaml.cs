@@ -23,7 +23,7 @@ namespace SatisfactoryCalculator.Views
         {
             InitializeComponent();
 
-            var item = RecipeBook.GetRecipe(RecipeNames.IronPlate);
+            var item = RecipeBook.GetRecipe(RecipeNames.ModularFrame);
 
             viewModel = new CalculatorViewModel(item);
             BindingContext = viewModel;

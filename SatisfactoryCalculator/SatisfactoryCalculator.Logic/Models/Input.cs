@@ -8,5 +8,7 @@ namespace SatisfactoryCalculator.Logic.Models
         public RecipeNames Name { get; set; }
 
         public float Amount { get; set; }
+
+        public string DisplayString => $"{Name}: {Amount}";
     }
 }

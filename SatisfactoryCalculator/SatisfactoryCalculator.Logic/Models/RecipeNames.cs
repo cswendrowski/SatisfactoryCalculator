@@ -16,7 +16,9 @@
         IronRod,
         Screw,
         ReinforcedIronPlate,
+
         Rotor,
-        ModularFrame
+        ModularFrame,
+
     }
 }

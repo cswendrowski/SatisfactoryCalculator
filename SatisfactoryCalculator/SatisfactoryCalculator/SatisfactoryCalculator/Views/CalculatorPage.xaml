@@ -4,9 +4,34 @@
              x:Class="SatisfactoryCalculator.Views.CalculatorPage"
              Title="{Binding Title}">
     <StackLayout Spacing="20" Padding="15">
+
+        <Picker ItemsSource="{Binding Recipes}" SelectedItem="{Binding ItemName}"/>
+
         <Label Text="Item:" FontSize="Medium" />
         <Label Text="{Binding Item.HumanName}" FontSize="Small"/>
         <Label Text="Output:" FontSize="Medium" />
         <Label Text="{Binding Item.OutputPerMinuteString}" FontSize="Small"/>
+
+        <StackLayout>
+            <Label Text="Needs" FontSize="Large" />
+            
+            <Label Text="Total Machines:" FontSize="Medium" />
+            <ListView ItemsSource="{Binding MachineNeeds}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            <Label Text="Total Resources:" FontSize="Medium" />
+            <ListView ItemsSource="{Binding ResourceNeeds}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
     </StackLayout>
 </ContentPage>
