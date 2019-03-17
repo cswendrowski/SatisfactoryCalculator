@@ -27,40 +27,40 @@ namespace SatisfactoryCalculator.Logic
             AddToBook(new Recipe
             {
                 Name = RecipeNames.IronOre,
-                OutputPerMinute = 60,
+                CraftingTimePerItem = 1,
                 Machine = Machines.Miner,
             });
 
             AddToBook(new Recipe
             {
                 Name = RecipeNames.IronIngot,
-                OutputPerMinute = 30,
+                CraftingTimePerItem = 2,
                 Machine = Machines.Smelter,
                 Inputs = new List<Input>
                 {
-                    new Input { Name = RecipeNames.IronOre, InputPerMinute = 30 }
+                    new Input { Name = RecipeNames.IronOre, Amount = 1 }
                 }
             });
 
             AddToBook(new Recipe
             {
                 Name = RecipeNames.IronPlate,
-                OutputPerMinute = 15,
+                CraftingTimePerItem = 4,
                 Machine = Machines.Constructor,
                 Inputs = new List<Input>
                 {
-                    new Input { Name = RecipeNames.IronIngot, InputPerMinute = 30 }
+                    new Input { Name = RecipeNames.IronIngot, Amount = 2 }
                 }
             });
 
             AddToBook(new Recipe
             {
                 Name = RecipeNames.IronRod,
-                OutputPerMinute = 15,
+                CraftingTimePerItem = 4,
                 Machine = Machines.Constructor,
                 Inputs = new List<Input>
                 {
-                    new Input { Name = RecipeNames.IronIngot, InputPerMinute = 15 }
+                    new Input { Name = RecipeNames.IronIngot, Amount = 1 }
                 }
             });
         }

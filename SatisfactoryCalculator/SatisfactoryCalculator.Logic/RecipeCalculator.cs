@@ -14,12 +14,13 @@ namespace SatisfactoryCalculator.Logic
             return needs;
         }
 
-        private static void AddInputNeeds(Recipe recipe, RecipeNeeds needs)
+        private static void AddInputNeeds(Recipe recipe, RecipeNeeds needs, double ratio = 1.00)
         {
             if (!needs.TotalMachineNeeds.ContainsKey(recipe.Machine))
             {
                 needs.TotalMachineNeeds[recipe.Machine] = 0;
             }
+            // TODO: Only add the % of the machine needed such as .5 of a Miner's output
             needs.TotalMachineNeeds[recipe.Machine]++;
 
             if (recipe.Inputs.Any())
@@ -31,9 +32,11 @@ namespace SatisfactoryCalculator.Logic
                     {
                         needs.TotalResourceNeeds[input.Name] = 0;
                     }
-                    needs.TotalResourceNeeds[input.Name] += input.InputPerMinute;
+                    var inputNeeds = input.Amount * recipe.ProducedPerMinute * ratio;
+                    needs.TotalResourceNeeds[input.Name] += inputNeeds;
 
-                    AddInputNeeds(RecipeBook.GetRecipe(input.Name), needs);
+                    var inputRecipe = RecipeBook.GetRecipe(input.Name);
+                    AddInputNeeds(inputRecipe, needs, inputNeeds / inputRecipe.ProducedPerMinute);
                 }
             }
         }

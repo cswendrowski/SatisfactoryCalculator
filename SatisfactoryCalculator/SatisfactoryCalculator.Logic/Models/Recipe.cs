@@ -11,9 +11,11 @@ namespace SatisfactoryCalculator.Logic.Models
 
         public string HumanName => Name.Humanize().Transform(To.TitleCase);
 
-        public int OutputPerMinute { get; set; }
+        public int CraftingTimePerItem { get; set; }
 
-        public string OutputPerMinuteString => $"{OutputPerMinute} / minute";
+        public double ProducedPerMinute => 60 / CraftingTimePerItem;
+
+        public string OutputPerMinuteString => $"{ProducedPerMinute} / minute";
 
         public Machines Machine { get; set; }
 
