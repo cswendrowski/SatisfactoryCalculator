@@ -6,6 +6,8 @@ namespace SatisfactoryCalculator.Logic.Models
     {
         public List<Input> Inputs { get; set; } = new List<Input>();
 
-        public Dictionary<string, int> TotalResourceNeeds { get; set; } = new Dictionary<string, int>();
+        public Dictionary<RecipeNames, int> TotalResourceNeeds { get; set; } = new Dictionary<RecipeNames, int>();
+
+        public Dictionary<Machines, int> TotalMachineNeeds { get; set; } = new Dictionary<Machines, int>();
     }
 }

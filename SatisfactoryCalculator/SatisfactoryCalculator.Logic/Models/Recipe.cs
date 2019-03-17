@@ -1,8 +1,10 @@
 ﻿using Humanizer;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace SatisfactoryCalculator.Logic.Models
 {
+    [DebuggerDisplay("{HumanName}")]
     public class Recipe
     {
         public RecipeNames Name { get; set; }

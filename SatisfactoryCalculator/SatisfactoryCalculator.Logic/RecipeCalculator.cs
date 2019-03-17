@@ -1,13 +1,41 @@
 ﻿using SatisfactoryCalculator.Logic.Models;
+using System.Linq;
 
 namespace SatisfactoryCalculator.Logic
 {
-    public class RecipeCalculator
+    public static class RecipeCalculator
     {
-        public RecipeNeeds CalculateRecipeNeeds(Recipe recipe)
+        public static RecipeNeeds CalculateRecipeNeeds(Recipe recipe)
         {
-            // TODO: recursively get all Inputs and calculate summed total of all resources
-            return new RecipeNeeds();
+            var needs = new RecipeNeeds();
+
+            AddInputNeeds(recipe, needs);
+
+            return needs;
+        }
+
+        private static void AddInputNeeds(Recipe recipe, RecipeNeeds needs)
+        {
+            if (!needs.TotalMachineNeeds.ContainsKey(recipe.Machine))
+            {
+                needs.TotalMachineNeeds[recipe.Machine] = 0;
+            }
+            needs.TotalMachineNeeds[recipe.Machine]++;
+
+            if (recipe.Inputs.Any())
+            {
+                needs.Inputs.AddRange(recipe.Inputs);
+                foreach (var input in recipe.Inputs)
+                {
+                    if (!needs.TotalResourceNeeds.ContainsKey(input.Name))
+                    {
+                        needs.TotalResourceNeeds[input.Name] = 0;
+                    }
+                    needs.TotalResourceNeeds[input.Name] += input.InputPerMinute;
+
+                    AddInputNeeds(RecipeBook.GetRecipe(input.Name), needs);
+                }
+            }
         }
     }
 }
