@@ -10,7 +10,7 @@ namespace SatisfactoryCalculator.WebAssembly
         {
             Forms.Init();
 
-            UI.Publish("/", new ItemDetailPage().GetOouiElement());
+            UI.Publish("/", new CalculatorPage().GetOouiElement());
         }
     }
 }

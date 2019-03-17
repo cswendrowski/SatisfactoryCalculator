@@ -2,7 +2,7 @@
 {
     public class Input
     {
-        public string Name { get; set; }
+        public RecipeNames Name { get; set; }
 
         public int InputPerMinute { get; set; }
     }

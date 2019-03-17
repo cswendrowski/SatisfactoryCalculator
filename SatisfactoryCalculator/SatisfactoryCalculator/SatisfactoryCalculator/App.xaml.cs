@@ -14,7 +14,7 @@ namespace SatisfactoryCalculator
             InitializeComponent();
 
 
-            MainPage = new ItemDetailPage();
+            MainPage = new CalculatorPage();
         }
 
         protected override void OnStart()

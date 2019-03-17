@@ -17,4 +17,10 @@
   <ItemGroup>
     <ProjectReference Include="..\..\SatisfactoryCalculator.Logic\SatisfactoryCalculator.Logic.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\CalculatorPage.xaml.cs">
+      <DependentUpon>CalculatorPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

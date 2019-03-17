@@ -1,15 +1,19 @@
-﻿using System;
+﻿using Humanizer;
 using System.Collections.Generic;
 
 namespace SatisfactoryCalculator.Logic.Models
 {
     public class Recipe
     {
-        public string Name { get; set; }
+        public RecipeNames Name { get; set; }
+
+        public string HumanName => Name.Humanize().Transform(To.TitleCase);
 
         public int OutputPerMinute { get; set; }
 
-        public string Machine { get; set; }
+        public string OutputPerMinuteString => $"{OutputPerMinute} / minute";
+
+        public Machines Machine { get; set; }
 
         public List<Input> Inputs { get; set; } = new List<Input>();
     }
