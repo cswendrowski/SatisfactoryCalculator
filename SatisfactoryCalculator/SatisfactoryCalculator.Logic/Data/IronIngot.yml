@@ -1,0 +1,5 @@
+Name: Iron Ingot
+OutputPerMinute: 60
+Machine: Smelter
+Inputs:
+  - { Name: Iron Ore, InputPerMinute: 60 }
