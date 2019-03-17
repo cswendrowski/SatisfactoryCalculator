@@ -91,8 +91,6 @@ namespace SatisfactoryCalculator.Logic.Tests
             needs.TotalResourceNeeds.ShouldNotBeEmpty();
             needs.TotalMachineNeeds.ShouldNotBeEmpty();
 
-            needs.TotalResourceNeeds[RecipeNames.IronOre].ShouldBe(15);
-
             needs.TotalMachineNeeds[Machines.Miner].ShouldBe(.25);
             needs.TotalMachineNeeds[Machines.Smelter].ShouldBe(.5);
             needs.TotalMachineNeeds[Machines.Constructor].ShouldBe(1);
@@ -102,7 +100,7 @@ namespace SatisfactoryCalculator.Logic.Tests
         }
 
         [Fact]
-        public void CanCalculateModularFramed()
+        public void CanCalculateModularFrame()
         {
             var recipe = RecipeBook.GetRecipe(RecipeNames.ModularFrame);
 
@@ -113,14 +111,12 @@ namespace SatisfactoryCalculator.Logic.Tests
             needs.TotalResourceNeeds.ShouldNotBeEmpty();
             needs.TotalMachineNeeds.ShouldNotBeEmpty();
 
-            needs.TotalResourceNeeds[RecipeNames.IronOre].ShouldBe(15);
-
             needs.TotalMachineNeeds[Machines.Miner].ShouldBe(.25);
             needs.TotalMachineNeeds[Machines.Smelter].ShouldBe(.5);
             needs.TotalMachineNeeds[Machines.Constructor].ShouldBe(1);
 
-            needs.TotalResourceNeeds[RecipeNames.IronOre].ShouldBe(15);
-            needs.TotalResourceNeeds[RecipeNames.IronIngot].ShouldBe(15);
+            needs.TotalResourceNeeds[RecipeNames.IronOre].ShouldBe(168);
+            needs.TotalResourceNeeds[RecipeNames.IronIngot].ShouldBe(168);
         }
     }
 }

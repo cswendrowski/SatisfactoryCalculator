@@ -1,4 +1,5 @@
 ﻿using SatisfactoryCalculator.Logic.Models;
+using System;
 using System.Linq;
 
 namespace SatisfactoryCalculator.Logic
@@ -10,6 +11,11 @@ namespace SatisfactoryCalculator.Logic
             var needs = new RecipeNeeds();
 
             AddInputNeeds(recipe, needs);
+
+            foreach (var key in needs.TotalMachineNeeds.Keys.ToList())
+            {
+                needs.TotalMachineNeeds[key] = Math.Round(needs.TotalMachineNeeds[key], 2);
+            }
 
             return needs;
         }
@@ -33,7 +39,7 @@ namespace SatisfactoryCalculator.Logic
                         needs.TotalResourceNeeds[input.Name] = 0;
                     }
                     var inputNeeds = input.Amount * recipe.ProducedPerMinute * ratio;
-                    needs.TotalResourceNeeds[input.Name] += inputNeeds;
+                    needs.TotalResourceNeeds[input.Name] += Math.Round(inputNeeds);
 
                     var inputRecipe = RecipeBook.GetRecipe(input.Name);
                     AddInputNeeds(inputRecipe, needs, inputNeeds / inputRecipe.ProducedPerMinute);
