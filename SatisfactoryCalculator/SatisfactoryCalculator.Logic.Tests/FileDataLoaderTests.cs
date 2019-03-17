@@ -17,5 +17,16 @@ namespace SatisfactoryCalculator.Logic.Tests
             iron.Inputs.ShouldNotBeEmpty();
             iron.Inputs.First().Name.ShouldBe("Iron Ore");
         }
+
+        [Fact]
+        public void CanLoadOre()
+        {
+            var iron = FileDataLoader.LoadRecipe("Iron Ore");
+
+            iron.ShouldNotBeNull();
+            iron.Name.ShouldBe("Iron Ore");
+            iron.OutputPerMinute.ShouldBe(60);
+            iron.Inputs.ShouldBeNull();
+        }
     }
 }
