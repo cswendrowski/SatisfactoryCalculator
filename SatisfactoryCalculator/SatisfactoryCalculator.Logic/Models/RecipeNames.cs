@@ -7,6 +7,10 @@
         IronOre,
         IronIngot,
         IronPlate,
-        IronRod
+        IronRod,
+        Screw,
+        ReinforcedIronPlate,
+        Rotor,
+        ModularFrame
     }
 }

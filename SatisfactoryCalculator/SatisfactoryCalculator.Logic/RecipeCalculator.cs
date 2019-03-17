@@ -21,7 +21,7 @@ namespace SatisfactoryCalculator.Logic
                 needs.TotalMachineNeeds[recipe.Machine] = 0;
             }
             // TODO: Only add the % of the machine needed such as .5 of a Miner's output
-            needs.TotalMachineNeeds[recipe.Machine]++;
+            needs.TotalMachineNeeds[recipe.Machine] += ratio;
 
             if (recipe.Inputs.Any())
             {

@@ -63,6 +63,54 @@ namespace SatisfactoryCalculator.Logic
                     new Input { Name = RecipeNames.IronIngot, Amount = 1 }
                 }
             });
+
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.Screw,
+                CraftingTimePerItem = 0.6666666666666666666f,
+                Machine = Machines.Constructor,
+                Inputs = new List<Input>
+                {
+                    new Input { Name = RecipeNames.IronRod, Amount = 0.16666666666666f }
+                }
+            });
+
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.ReinforcedIronPlate,
+                CraftingTimePerItem = 10,
+                Machine = Machines.Assembler,
+                Inputs = new List<Input>
+                {
+                    new Input { Name = RecipeNames.IronPlate, Amount = 4 },
+                    new Input { Name = RecipeNames.Screw, Amount = 24 }
+                }
+            });
+
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.Rotor,
+                CraftingTimePerItem = 10,
+                Machine = Machines.Assembler,
+                Inputs = new List<Input>
+                {
+                    new Input { Name = RecipeNames.IronRod, Amount = 3 },
+                    new Input { Name = RecipeNames.Screw, Amount = 22 }
+                }
+            });
+
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.ModularFrame,
+                CraftingTimePerItem = 15,
+                Machine = Machines.Assembler,
+                Inputs = new List<Input>
+                {
+                    new Input { Name = RecipeNames.ReinforcedIronPlate, Amount = 3 },
+                    new Input { Name = RecipeNames.IronRod, Amount = 6 }
+                }
+            });
+
         }
     }
 }
