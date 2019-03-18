@@ -9,13 +9,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatisfactoryCalculator.Andr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatisfactoryCalculator.iOS", "SatisfactoryCalculator\SatisfactoryCalculator.iOS\SatisfactoryCalculator.iOS.csproj", "{9EA5F61F-C5EF-4A40-931F-FF1C8D873418}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatisfactoryCalculator", "SatisfactoryCalculator\SatisfactoryCalculator\SatisfactoryCalculator.csproj", "{810F19BC-B0FA-4A1E-8225-998D485AE679}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SatisfactoryCalculator", "SatisfactoryCalculator\SatisfactoryCalculator\SatisfactoryCalculator.csproj", "{810F19BC-B0FA-4A1E-8225-998D485AE679}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatisfactoryCalculator.WebAssembly", "SatisfactoryCalculator.WebAssembly\SatisfactoryCalculator.WebAssembly.csproj", "{21155DCF-C2B3-41C9-A3C9-4BBFFB2259A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SatisfactoryCalculator.WebAssembly", "SatisfactoryCalculator.WebAssembly\SatisfactoryCalculator.WebAssembly.csproj", "{21155DCF-C2B3-41C9-A3C9-4BBFFB2259A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatisfactoryCalculator.Logic", "SatisfactoryCalculator.Logic\SatisfactoryCalculator.Logic.csproj", "{73A29748-76BC-45F0-B3B5-6B175F6B39DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SatisfactoryCalculator.Logic", "SatisfactoryCalculator.Logic\SatisfactoryCalculator.Logic.csproj", "{73A29748-76BC-45F0-B3B5-6B175F6B39DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatisfactoryCalculator.Logic.Tests", "SatisfactoryCalculator.Logic.Tests\SatisfactoryCalculator.Logic.Tests.csproj", "{90D311E3-A0B7-4057-95D7-B3F502680800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SatisfactoryCalculator.Logic.Tests", "SatisfactoryCalculator.Logic.Tests\SatisfactoryCalculator.Logic.Tests.csproj", "{90D311E3-A0B7-4057-95D7-B3F502680800}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatisfactoryCalculator.Blazor", "SatisfactoryCalculator.Blazor\SatisfactoryCalculator.Blazor.csproj", "{88A2A56D-1B01-4E5F-8626-1F1156E520A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -249,6 +251,30 @@ Global
 		{90D311E3-A0B7-4057-95D7-B3F502680800}.Release|x64.Build.0 = Release|Any CPU
 		{90D311E3-A0B7-4057-95D7-B3F502680800}.Release|x86.ActiveCfg = Release|Any CPU
 		{90D311E3-A0B7-4057-95D7-B3F502680800}.Release|x86.Build.0 = Release|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Debug|ARM.Build.0 = Debug|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Debug|x64.Build.0 = Debug|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Debug|x86.Build.0 = Debug|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Release|ARM.ActiveCfg = Release|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Release|ARM.Build.0 = Release|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Release|iPhone.Build.0 = Release|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Release|x64.ActiveCfg = Release|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Release|x64.Build.0 = Release|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Release|x86.ActiveCfg = Release|Any CPU
+		{88A2A56D-1B01-4E5F-8626-1F1156E520A0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
