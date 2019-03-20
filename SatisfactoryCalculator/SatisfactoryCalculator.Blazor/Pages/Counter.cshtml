@@ -1,10 +1,12 @@
-﻿@page "/counter"
+﻿@page "/doggo"
 
-<h1>Counter</h1>
+<h2>Lizard Doggo Simulator</h2>
 
-<p>Current count: @currentCount</p>
+<img onclick="@IncrementCount" src="https://gamepedia.cursecdn.com/satisfactory_gamepedia_en/f/fc/Lizard_dog.jpg?version=b135afe7a1d4bb913468e457520a0f07" />
 
-<button class="btn btn-primary" onclick="@IncrementCount">Click me</button>
+<p>The Lizard Doggo has been pet @currentCount times</p>
+
+<button class="btn btn-primary" onclick="@IncrementCount">Pet the Lizard Doggo</button>
 
 @functions {
     int currentCount = 0;

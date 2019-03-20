@@ -2,21 +2,29 @@
 @using SatisfactoryCalculator.Logic
 @using SatisfactoryCalculator.Logic.Models
 
-<div>
-    <strong>@ItemName</strong>
-    <p>Output: @Item.OutputPerMinuteString</p>
-    <h3>Needs</h3>
-    <h4>Total Machines:</h4>
-    @foreach (var machine in MachineNeeds)
-    {
-        <p>@machine.Name</p>
-    }
-    <h4>Total Resources:</h4>
-    @foreach (var resource in ResourceNeeds)
-    {
-        <p>@resource.Name</p>
-    }
-</div>
+<h2 style="padding-top: 30px;">Item Calculator</h2>
+
+    <div style="padding-top: 15px;">
+        <select class="form-control" bind="@ItemName">
+            <option value="">-- Select Recipe --</option>
+            @foreach (var item in Recipes)
+            {
+                <option value="@item">@item</option>
+            }
+        </select>
+        <p style="padding-top: 10px;">Output: @Item.OutputPerMinuteString</p>
+        <h3>Needs</h3>
+        <h4>Total Machines:</h4>
+        @foreach (var machine in MachineNeeds)
+        {
+            <p>@machine.Name</p>
+        }
+        <h4>Total Resources:</h4>
+        @foreach (var resource in ResourceNeeds)
+        {
+            <p>@resource.Name</p>
+        }
+    </div>
 
 @functions {
     private string _itemName = "";

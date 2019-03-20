@@ -1,5 +1,7 @@
 ﻿using SatisfactoryCalculator.Logic.Models;
+using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace SatisfactoryCalculator.Logic
 {
@@ -20,6 +22,12 @@ namespace SatisfactoryCalculator.Logic
         private static void AddToBook(Recipe recipe)
         {
             _book.Add(recipe.Name, recipe);
+        }
+
+
+        static void OnTimer(object state)
+        {
+            throw new NotImplementedException();
         }
 
         private static void LoadIron()
