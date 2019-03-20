@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using SatisfactoryCalculator.Blazor;
 using SatisfactoryCalculator.Logic;
 using SatisfactoryCalculator.Logic.Models;
 using Shouldly;
