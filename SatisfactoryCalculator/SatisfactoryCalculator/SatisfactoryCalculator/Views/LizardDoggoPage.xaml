@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SatisfactoryCalculator.Views.LizardDoggoPage"
-             Title="Calculator">
+             Title="Lizard Doggo Simulator">
     <StackLayout Spacing="20" Padding="15">
 
         <ImageButton HorizontalOptions="Center" Clicked="OnClick" Source="https://gamepedia.cursecdn.com/satisfactory_gamepedia_en/f/fc/Lizard_dog.jpg?version=b135afe7a1d4bb913468e457520a0f07" />

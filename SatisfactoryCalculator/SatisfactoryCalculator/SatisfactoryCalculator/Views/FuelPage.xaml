@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SatisfactoryCalculator.Views.FuelPage"
+             Title="Lizard Doggo Simulator">
+    <StackLayout Spacing="20" Padding="15">
+        <Picker ItemsSource="{Binding Recipes}" SelectedItem="{Binding ItemName}"/>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="{Binding AmountToLoad}" />
+            <Stepper Value="{Binding AmountToLoad}" Minimum="0" Maximum="{Binding Item.StackSize}" Increment="1" ValueChanged="Stepper_ValueChanged"/>
+            <Button Clicked="OnClick" Text="Load Fuel" />
+        </StackLayout>
+        
+        <Label Text="{Binding Loaded}" />
+        <Label Text="{Binding SecondsUntilEmpty}" />
+    </StackLayout>
+</ContentPage>

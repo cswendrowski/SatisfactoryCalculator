@@ -32,6 +32,12 @@ namespace SatisfactoryCalculator.Views
                     case (int)MenuItemType.LizardDoggo:
                         MenuPages.Add(id, new NavigationPage(new LizardDoggoPage()));
                         break;
+                    case (int)MenuItemType.BiofuelTimer:
+                        MenuPages.Add(id, new NavigationPage(new FuelPage()));
+                        break;
+                    case (int)MenuItemType.Map:
+                        MenuPages.Add(id, new NavigationPage(new MapPage()));
+                        break;
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;

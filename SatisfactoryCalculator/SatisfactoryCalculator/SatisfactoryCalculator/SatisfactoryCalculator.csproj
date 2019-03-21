@@ -19,6 +19,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\FuelPage.xaml.cs">
+      <DependentUpon>FuelPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\Map.xaml.cs">
+      <DependentUpon>Map.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\LizardDoggoPage.xaml.cs">
       <DependentUpon>LizardDoggoPage.xaml</DependentUpon>
     </Compile>
