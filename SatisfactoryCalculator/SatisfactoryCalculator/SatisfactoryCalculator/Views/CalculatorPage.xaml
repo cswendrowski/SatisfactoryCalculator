@@ -2,13 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SatisfactoryCalculator.Views.CalculatorPage"
-             Title="{Binding Title}">
+             Title="Calculator">
     <StackLayout Spacing="20" Padding="15">
 
         <Picker ItemsSource="{Binding Recipes}" SelectedItem="{Binding ItemName}"/>
 
-        <Label Text="Item:" FontSize="Medium" />
-        <Label Text="{Binding Item.HumanName}" FontSize="Small"/>
         <Label Text="Output:" FontSize="Medium" />
         <Label Text="{Binding Item.OutputPerMinuteString}" FontSize="Small"/>
 

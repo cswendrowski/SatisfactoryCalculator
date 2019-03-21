@@ -19,6 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\LizardDoggoPage.xaml.cs">
+      <DependentUpon>LizardDoggoPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\CalculatorPage.xaml.cs">
       <DependentUpon>CalculatorPage.xaml</DependentUpon>
     </Compile>

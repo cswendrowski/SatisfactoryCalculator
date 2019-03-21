@@ -6,7 +6,10 @@ namespace SatisfactoryCalculator.Models
 {
     public enum MenuItemType
     {
-        Browse,
+        Calculator,
+        LizardDoggo,
+        BiofuelTimer,
+        Map,
         About
     }
     public class HomeMenuItem
