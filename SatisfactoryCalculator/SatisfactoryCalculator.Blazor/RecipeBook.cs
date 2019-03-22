@@ -170,6 +170,41 @@ namespace SatisfactoryCalculator.Logic
                     new Input { Name = RecipeNames.Limestone, Amount = 3 }
                 }
             });
+
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.SteelIngot,
+                CraftingTimePerItem = 2,
+                Machine = Machines.Foundry,
+                Inputs = new List<Input>
+                {
+                    new Input { Name = RecipeNames.IronOre, Amount = 1.5 },
+                    new Input { Name = RecipeNames.Coal, Amount = 1.5 }
+                }
+            });
+
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.SteelBeam,
+                CraftingTimePerItem = 6,
+                Machine = Machines.Constructor,
+                Inputs = new List<Input>
+                {
+                    new Input { Name = RecipeNames.SteelIngot, Amount = 3 }
+                }
+            });
+
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.EncasedIndustrialBeam,
+                CraftingTimePerItem = 15,
+                Machine = Machines.Assembler,
+                Inputs = new List<Input>
+                {
+                    new Input { Name = RecipeNames.SteelBeam, Amount = 4 },
+                    new Input { Name = RecipeNames.Concrete, Amount = 5 }
+                }
+            });
         }
     }
 }

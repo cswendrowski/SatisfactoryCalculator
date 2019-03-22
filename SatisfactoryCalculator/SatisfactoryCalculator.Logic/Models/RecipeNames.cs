@@ -16,9 +16,12 @@
         IronRod,
         Screw,
         ReinforcedIronPlate,
-
         Rotor,
         ModularFrame,
-
+        Coal,
+        SteelIngot,
+        SteelBeam,
+        SteelPipe,
+        EncasedIndustrialBeam
     }
 }
