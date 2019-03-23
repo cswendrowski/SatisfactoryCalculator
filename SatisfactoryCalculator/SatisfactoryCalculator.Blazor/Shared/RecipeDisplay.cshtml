@@ -88,5 +88,6 @@
                 Name = $"{resourceNeed.Key.Humanize().Transform(To.TitleCase)}: {resourceNeed.Value}"
             });
         }
+        this.StateHasChanged();
     }
 }

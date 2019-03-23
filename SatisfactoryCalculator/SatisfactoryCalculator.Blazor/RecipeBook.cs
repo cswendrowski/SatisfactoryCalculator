@@ -1,4 +1,5 @@
 ﻿using SatisfactoryCalculator.Logic.Models;
+using System;
 using System.Collections.Generic;
 
 namespace SatisfactoryCalculator.Logic
@@ -10,6 +11,9 @@ namespace SatisfactoryCalculator.Logic
         static RecipeBook()
         {
             LoadIron();
+            LoadCopper();
+            LoadSteel();
+            LoadConcrete();
         }
 
         public static Recipe GetRecipe(RecipeNames name)
@@ -110,7 +114,10 @@ namespace SatisfactoryCalculator.Logic
                     new Input { Name = RecipeNames.IronRod, Amount = 6 }
                 }
             });
+        }
 
+        private static void LoadCopper()
+        {
             AddToBook(new Recipe
             {
                 Name = RecipeNames.CopperOre,
@@ -141,7 +148,7 @@ namespace SatisfactoryCalculator.Logic
                     new Input { Name = RecipeNames.CopperIngot, Amount = 1 }
                 }
             });
-            
+
             AddToBook(new Recipe
             {
                 Name = RecipeNames.Cable,
@@ -152,23 +159,15 @@ namespace SatisfactoryCalculator.Logic
                     new Input { Name = RecipeNames.Wire, Amount = 2 }
                 }
             });
+        }
 
+        private static void LoadSteel()
+        {
             AddToBook(new Recipe
             {
-                Name = RecipeNames.Limestone,
+                Name = RecipeNames.Coal,
                 CraftingTimePerItem = 1,
-                Machine = Machines.Miner,
-            });
-
-            AddToBook(new Recipe
-            {
-                Name = RecipeNames.Concrete,
-                CraftingTimePerItem = 4,
-                Machine = Machines.Constructor,
-                Inputs = new List<Input>
-                {
-                    new Input { Name = RecipeNames.Limestone, Amount = 3 }
-                }
+                Machine = Machines.Miner
             });
 
             AddToBook(new Recipe
@@ -178,8 +177,8 @@ namespace SatisfactoryCalculator.Logic
                 Machine = Machines.Foundry,
                 Inputs = new List<Input>
                 {
-                    new Input { Name = RecipeNames.IronOre, Amount = 1.5 },
-                    new Input { Name = RecipeNames.Coal, Amount = 1.5 }
+                    new Input { Name = RecipeNames.IronOre, Amount = 1.5f },
+                    new Input { Name = RecipeNames.Coal, Amount = 1.5f }
                 }
             });
 
@@ -196,6 +195,17 @@ namespace SatisfactoryCalculator.Logic
 
             AddToBook(new Recipe
             {
+                Name = RecipeNames.SteelPipe,
+                CraftingTimePerItem = 4,
+                Machine = Machines.Constructor,
+                Inputs = new List<Input>
+                {
+                    new Input { Name = RecipeNames.SteelIngot, Amount = 1 }
+                }
+            });
+
+            AddToBook(new Recipe
+            {
                 Name = RecipeNames.EncasedIndustrialBeam,
                 CraftingTimePerItem = 15,
                 Machine = Machines.Assembler,
@@ -203,6 +213,27 @@ namespace SatisfactoryCalculator.Logic
                 {
                     new Input { Name = RecipeNames.SteelBeam, Amount = 4 },
                     new Input { Name = RecipeNames.Concrete, Amount = 5 }
+                }
+            });
+        }
+
+        private static void LoadConcrete()
+        {
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.Limestone,
+                CraftingTimePerItem = 1,
+                Machine = Machines.Miner,
+            });
+
+            AddToBook(new Recipe
+            {
+                Name = RecipeNames.Concrete,
+                CraftingTimePerItem = 4,
+                Machine = Machines.Constructor,
+                Inputs = new List<Input>
+                {
+                    new Input { Name = RecipeNames.Limestone, Amount = 3 }
                 }
             });
         }
