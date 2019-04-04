@@ -2,11 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SatisfactoryCalculator.Views.MapPage"
+             xmlns:local="clr-namespace:SatisfactoryCalculator;assembly=SatisfactoryCalculator"
              Title="Map">
     <StackLayout Spacing="20" Padding="15">
-
-        <Image HorizontalOptions="Center" Source="https://i.redd.it/faja2ok4yem21.jpg" />
-
-        <Label Text="Full credit to /u/?" />
+        <ScrollView>
+            <local:PinchToZoomContainer>
+                <local:PinchToZoomContainer.Content>
+                    <Image HorizontalOptions="Center" Source="Map.jpg" />
+                </local:PinchToZoomContainer.Content>
+            </local:PinchToZoomContainer>
+        </ScrollView>
+        <Label Text="Full credit to u/hiimchels" />
     </StackLayout>
 </ContentPage>
